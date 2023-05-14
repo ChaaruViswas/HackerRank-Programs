@@ -1,0 +1,23 @@
+//Migratory Birds
+
+#include <stdio.h>
+int main()
+{
+    int n,type,argmax=0,i;
+    int st[5]={0};
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&type);
+        st[type-1]++;
+    }
+    for(i=0;i<5;i++)
+    {
+        if(st[i]>st[argmax]) 
+        {
+            argmax=i;
+        }
+    }
+    printf("%d",argmax+1);
+    return 0;
+}
